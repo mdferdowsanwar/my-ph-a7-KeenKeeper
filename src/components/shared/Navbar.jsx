@@ -7,8 +7,8 @@ import { ImStatsDots } from 'react-icons/im';
 
 const Navbar = () => {
     return (
-        <div className='shadow py-4'>
-            <div className='w-10/12 mx-auto flex flex-col md:flex-row  justify-between items-center gap-3'>
+        <div className='py-4 border-b border-gray-200'>
+            <div className='w-11/12 mx-auto flex flex-col md:flex-row  justify-between items-center gap-3'>
                 <div>
                     <a href="">
                         <img src={Logo} alt="" />
