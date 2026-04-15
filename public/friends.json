@@ -6,7 +6,7 @@
     "email": "rahim.uddin@gmail.com",
     "days_since_contact": 18,
     "status": "overdue",
-    "tags": ["school", "football"],
+    "tags": ["SCHOOL"],
     "bio": "School friend from Gazipur. We used to play football every weekend.",
     "goal": 14,
     "next_due_date": "2026-04-05"
@@ -18,7 +18,7 @@
     "email": "nusrat.jahan@yahoo.com",
     "days_since_contact": 10,
     "status": "almost due",
-    "tags": ["college", "close friend"],
+    "tags": ["COLLEGE"],
     "bio": "Met during college. We still share book recommendations regularly.",
     "goal": 14,
     "next_due_date": "2026-04-18"
@@ -30,7 +30,7 @@
     "email": "tanvir.hasan@outlook.com",
     "days_since_contact": 5,
     "status": "on-track",
-    "tags": ["office", "tech"],
+    "tags": ["WORK", "FAMILY"],
     "bio": "Colleague from my first job. We often discuss new tech trends.",
     "goal": 14,
     "next_due_date": "2026-04-23"
@@ -42,7 +42,7 @@
     "email": "farzana.akter@gmail.com",
     "days_since_contact": 20,
     "status": "overdue",
-    "tags": ["university", "study group"],
+    "tags": ["FAMILY"],
     "bio": "We studied together at university. She helped me a lot during exams.",
     "goal": 14,
     "next_due_date": "2026-04-02"
@@ -54,7 +54,7 @@
     "email": "imran.hossain@gmail.com",
     "days_since_contact": 13,
     "status": "almost due",
-    "tags": ["gym", "fitness"],
+    "tags": ["HOBBY", "TRAVEL"],
     "bio": "Gym partner for over a year. Keeps me motivated to stay fit.",
     "goal": 14,
     "next_due_date": "2026-04-16"
@@ -66,19 +66,19 @@
     "email": "sadia.rahman@hotmail.com",
     "days_since_contact": 2,
     "status": "on-track",
-    "tags": ["neighbor", "family friend"],
+    "tags": ["FRIEND"],
     "bio": "Lives next door. Our families are very close.",
     "goal": 14,
     "next_due_date": "2026-04-26"
   },
   {
     "id": 7,
-    "name": "Mahmudul Karim",
+    "name": "Abdullah Ayash",
     "picture": "https://randomuser.me/api/portraits/men/77.jpg",
     "email": "mahmudul.karim@gmail.com",
     "days_since_contact": 16,
     "status": "overdue",
-    "tags": ["business", "startup"],
+    "tags": ["BUSINESS", "TRAVEL"],
     "bio": "Met at a startup event. We often discuss business ideas.",
     "goal": 14,
     "next_due_date": "2026-04-07"
@@ -90,7 +90,7 @@
     "email": "tania.sultana@gmail.com",
     "days_since_contact": 9,
     "status": "almost due",
-    "tags": ["travel", "photography"],
+    "tags": ["PHOTOGRAPHY"],
     "bio": "Travel buddy. We've explored several places in Bangladesh together.",
     "goal": 14,
     "next_due_date": "2026-04-19"
