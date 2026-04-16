@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const FriendsCard = ({ friend }) => {
-    console.log(friend);
+    
     return (
-        <Link to="" className="card bg-base-100 shadow-lg">
+        <Link to={`/friends/${friend.id}`} className="card bg-base-100 shadow-lg">
 
             <div className="flex justify-center items-center flex-col p-5">
                 <figure>

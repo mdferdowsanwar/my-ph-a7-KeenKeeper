@@ -5,7 +5,7 @@ import FriendsCard from '../../components/ui/FriendsCard';
 
 const Friends = () => {
     const { friends, loading } = useFriendsHook();
-    console.log(friends, "Friends");
+    //console.log(friends, "Friends");
     return (
         <div className="w-9/12 mx-auto my-10">
             <div className="mb-5">

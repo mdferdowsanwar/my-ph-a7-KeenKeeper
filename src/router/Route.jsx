@@ -1,9 +1,10 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layout/RootLayout";
 import HomePage from "../pages/homePage/HomePage";
 import Timeline from "../pages/timeline/Timeline";
 import Stats from "../pages/stats/Stats";
 import NotFound from "../pages/notFound/NotFound";
+import FriendDetails from '../pages/friends/FriendDetails';
 
 export const router = createBrowserRouter([
     {
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 Component: HomePage
+            },
+            {
+                path: "/friends/:id",
+                Component: FriendDetails
             },
             {
                 path: "/timeline",
