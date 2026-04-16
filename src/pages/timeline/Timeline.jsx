@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { QuickCheckInContext } from '../../context/QuickCheckInContext';
 import { FaAngleDown } from 'react-icons/fa';
 import { LuPhoneCall } from 'react-icons/lu';
@@ -12,6 +12,10 @@ const Timeline = () => {
         if(type === "video") return <CiVideoOn />;
     }
     const { checkIn } = useContext(QuickCheckInContext);
+
+    const [filter, setFilter] = useState("all");
+    const filterData = filter === "all" ? checkIn : checkIn.filter(ci => ci.type === filter);
+
     return (
         <div className="w-9/12 mx-auto my-10">
             <h2 className='text-3xl font-bold mb-5'>Timeline</h2>
@@ -21,9 +25,10 @@ const Timeline = () => {
                 </button>
                 <ul className="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
                     popover="auto" id="popover-1" style={{ positionAnchor: "--anchor-1" } /* as React.CSSProperties */}>
-                    <li><a><LuPhoneCall /> Filter by Call</a></li>
-                    <li><a><BsChatLeftText /> Filter by Text</a></li>
-                    <li><a><CiVideoOn /> Filter by Video</a></li>
+                    <li><a onClick={() => setFilter("call")}><LuPhoneCall /> Filter by Call</a></li>
+                    <li><a onClick={() => setFilter("text")}><BsChatLeftText /> Filter by Text</a></li>
+                    <li><a onClick={() => setFilter("video")}><CiVideoOn /> Filter by Video</a></li>
+                    <li><a onClick={() => setFilter("all")}> Show all Check IN</a></li>
                 </ul>
             </div>
 
@@ -32,7 +37,7 @@ const Timeline = () => {
                     No Check In found!
                 </h2>
             ) : (
-                checkIn.map((ci, ind) => {
+                filterData.map((ci, ind) => {
                     return (
                         <div key={ind} className="flex gap-4 items-center shadow p-3 rounded-md bg-base-100 mb-5">
                             <div className='text-2xl text-[#244D3F]'>
