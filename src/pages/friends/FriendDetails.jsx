@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router';
 import useFriendsHook from '../../hooks/useFriendsHook';
 import { ClockLoader } from 'react-spinners';
@@ -9,12 +9,16 @@ import { RiDeleteBin6Line } from 'react-icons/ri';
 import { LuPhoneCall } from 'react-icons/lu';
 import { BsChatLeftText } from 'react-icons/bs';
 import { CiVideoOn } from 'react-icons/ci';
+import { QuickCheckInContext } from '../../context/QuickCheckInContext';
+import { toast } from 'react-toastify';
 
 const FriendDetails = () => {
     const { id } = useParams();
     // console.log(id, "id");
     const { friends, loading } = useFriendsHook();
     const expectedFriend = friends.find((friend) => String(friend.id) === id);
+
+    const {checkIn, setCheckIn} = useContext(QuickCheckInContext);
 
     if (loading) {
         return (
@@ -23,6 +27,17 @@ const FriendDetails = () => {
             </div>
         );
     }
+
+    const handleCheckIn = (type) => {
+        const newCheckIn = {
+            name: expectedFriend.name,
+            type: type,
+            time: new Date,
+        };
+
+         setCheckIn([...checkIn, newCheckIn]);
+         toast.success(`${type} with ${expectedFriend.name}`);
+    };
 
     return (
         <div className="w-9/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-3 my-12">
@@ -97,17 +112,17 @@ const FriendDetails = () => {
                 <div className="bg-base-100 shadow-md rounded-sm px-5 py-6">
                     <h2 className='text-xl font-semibold text-[#244D3F] mb-2'>Quick Check-In</h2>
                     <div className='grid grid-cols-3 gap-3'>
-                        <button className='border border-gray-300 rounded-lg py-5 bg-gray-100 text-xl flex flex-col justify-center items-center gap-2'>
+                        <button onClick={() => handleCheckIn("call")} className='border border-gray-300 rounded-lg py-5 bg-gray-100 text-xl flex flex-col justify-center items-center gap-2 cursor-pointer'>
                             <LuPhoneCall />
                             <span>Call</span>
                         </button>
 
-                        <button className='border border-gray-300 rounded-lg py-5 bg-gray-100 text-xl flex flex-col justify-center items-center gap-2'>
+                        <button onClick={() => handleCheckIn("text")} className='border border-gray-300 rounded-lg py-5 bg-gray-100 text-xl flex flex-col justify-center items-center gap-2 cursor-pointer'>
                             <BsChatLeftText />
                             <span>Text</span>
                         </button>
 
-                        <button className='border border-gray-300 rounded-lg py-5 bg-gray-100 text-xl flex flex-col justify-center items-center gap-2'>
+                        <button onClick={() => handleCheckIn("video")} className='border border-gray-300 rounded-lg py-5 bg-gray-100 text-xl flex flex-col justify-center items-center gap-2 cursor-pointer'>
                             <CiVideoOn />
                             <span>Video</span>
                         </button>

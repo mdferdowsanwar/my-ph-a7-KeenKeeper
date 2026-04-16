@@ -1,11 +1,13 @@
 import React from 'react';
+import useFriendsHook from '../../hooks/useFriendsHook';
 
 const Summary = () => {
+    const {friends} = useFriendsHook();
     return (
         <div className='w-9/12 mx-auto pb-10 border-b border-gray-300'>
             <div className='grid grid-col sm:grid-cols-2 lg:grid-cols-4 gap-5'>
                 <div className='shadow-lg bg-white p-8 text-center space-y-2'>
-                    <h2 className='font-semibold text-3xl'>10</h2>
+                    <h2 className='font-semibold text-3xl'>{friends.length}</h2>
                     <p className='text-[#64748B]'>Total Friends</p>
                 </div>
                  <div className='shadow-lg bg-white p-8 text-center space-y-2'>
