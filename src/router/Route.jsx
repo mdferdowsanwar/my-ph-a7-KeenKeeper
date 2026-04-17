@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
                 Component: HomePage
             },
             {
-                path: "/friends/:id",
+                path: "/friendDetails/:id",
                 Component: FriendDetails
             },
             {

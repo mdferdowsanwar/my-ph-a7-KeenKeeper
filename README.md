@@ -1,16 +1,26 @@
-# React + Vite
+# 👥 KeenKeeper — Keep Your Friendships Alive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**KeenKeeper** is a personalized relationship management tool designed to help you maintain your social relation. In a fast-paced world, it’s easy to lose touch with important contacts. KeenKeeper tracks your interactions and ensures you never miss a meaningful follow-up.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Key Features
+### 1. Smart UI
+View your entire network as interactive cards. Each card provides an immediate visual summary of your relationship status and connection health at a glance.
 
-## React Compiler
+### 2. Proactive "Keen" Metrics
+The app automatically calculates the "Days Since Contact" and compares it against your custom goals. Stay informed with precise countdowns and "Next Due Date" calculations for every individual.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 3. Detailed Profile
+Access dedicated pages for every contact featuring their bio, preferred communication frequency, and integrated email shortcuts to initiate contact the moment you see it's due.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies to Use
+
+| Technology | Purpose |
+|---|---|
+| **React.js** | Build the UI |
+| **React Router DOM** | Handle page navigation |
+| **State Management** | Context API |
+| **Tailwind CSS+Daisy UI** | Styling and responsiveness |
+| **Recharts** | Chart |
+| **Deployment** | Vercel |

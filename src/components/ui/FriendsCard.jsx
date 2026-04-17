@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const FriendsCard = ({ friend }) => {
     
     return (
-        <Link to={`/friends/${friend.id}`} className="card bg-base-100 shadow-lg">
+        <Link to={`/friendDetails/${friend.id}`} className="card bg-base-100 shadow-lg">
 
             <div className="flex justify-center items-center flex-col p-5">
                 <figure>
