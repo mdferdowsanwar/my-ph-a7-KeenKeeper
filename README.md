@@ -23,4 +23,4 @@ Access dedicated pages for every contact featuring their bio, preferred communic
 | **State Management** | Context API |
 | **Tailwind CSS+Daisy UI** | Styling and responsiveness |
 | **Recharts** | Chart |
-| **Deployment** | Vercel |
+| **Deployment** | Netlify |

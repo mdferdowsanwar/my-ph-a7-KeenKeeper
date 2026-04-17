@@ -9,7 +9,7 @@ const useFriendsHook = () => {
         const fetchData = async () => {
             const res = await fetch("/friends.json");
             const data = await res.json();
-            console.log(data);
+            //console.log(data);
 
             setTimeout(() => {
                 setFriends(data);
